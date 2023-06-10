@@ -21,6 +21,5 @@ jobs:
         with:
           node-version-file: ./.node-version
           cache: pnpm
-          cache-dependency-path: ./pnpm-lock.yaml
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
       - run: pnpm run storybook:build
