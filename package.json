@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "app:dev": "next dev",
+    "app:build": "next build",
+    "app:start": "next start",
+    "app:lint": "next lint",
+    "storybook:build": "storybook dev -p 6006",
+    "storybook:dev": "storybook build"
   },
   "dependencies": {
     "@types/node": "20.2.6",
