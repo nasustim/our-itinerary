@@ -19,6 +19,6 @@ jobs:
           node-version-file: ./.node-version
           cache: pnpm
           cache-dependency-path: ./pnpm-lock.yaml
-      - run: npm ci
-      - run: npm run app:build
-      - run: npm run app:lint
+      - run: pnpm install
+      - run: pnpm run app:build
+      - run: pnpm run app:lint
