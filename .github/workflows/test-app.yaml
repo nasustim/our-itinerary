@@ -19,6 +19,7 @@ jobs:
           node-version-file: ./.node-version
           cache: pnpm
           cache-dependency-path: ./pnpm-lock.yaml
+      - run: corepack enable
       - run: pnpm install
       - run: pnpm run app:build
       - run: pnpm run app:lint
