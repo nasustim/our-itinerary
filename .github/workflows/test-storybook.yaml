@@ -17,7 +17,7 @@ jobs:
       - uses: actions/setup-node@v3.6.0
         with:
           node-version-file: ./.node-version
-          cache: npm
-          cache-dependency-path: ./package-lock.json
+          cache: pnpm
+          cache-dependency-path: ./pnpm-lock.yaml
       - run: npm ci
       - run: npm run storybook:build
