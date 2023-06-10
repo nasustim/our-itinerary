@@ -14,11 +14,13 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v3.0.0
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.32.9
       - uses: actions/setup-node@v3.6.0
         with:
           node-version-file: ./.node-version
           cache: pnpm
           cache-dependency-path: ./pnpm-lock.yaml
-      - run: corepack enable
       - run: pnpm install --frozen-lockfile
       - run: pnpm run storybook:build
